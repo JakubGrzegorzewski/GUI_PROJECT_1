@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class User extends Employee {
     String login;
@@ -8,7 +8,7 @@ public class User extends Employee {
     User(
     String name,
     String surname,
-    Date dateOfBirth,
+    LocalDateTime dateOfBirth,
     EmployeesDepartment department,
     String login,
     String password
