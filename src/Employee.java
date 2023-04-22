@@ -1,17 +1,18 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
+
 
 public abstract class Employee implements Comparable<Employee>{
     private String name;
     private String surname;
-    private Date dateOfBirth;
+    private LocalDateTime dateOfBirth;
     private EmployeesDepartment department;
 
     public static ArrayList<Employee> allEmployees = new ArrayList<Employee>();
     Employee(
             String name,
             String surname,
-            Date dateOfBirth,
+            LocalDateTime dateOfBirth,
             EmployeesDepartment department
     ){
         this.name = name;
