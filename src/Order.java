@@ -1,2 +1,6 @@
-public class Order {
+public class Order implements Runnable{
+    @Override
+    public void run() {
+
+    }
 }

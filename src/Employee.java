@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public abstract class Employee implements Comparable<Employee>{
@@ -8,7 +9,7 @@ public abstract class Employee implements Comparable<Employee>{
     private LocalDateTime dateOfBirth;
     private EmployeesDepartment department;
 
-    public static ArrayList<Employee> allEmployees = new ArrayList<Employee>();
+    public static List<Employee> allEmployees = new ArrayList<Employee>();
     Employee(
             String name,
             String surname,

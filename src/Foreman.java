@@ -1,14 +1,15 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
 public class Foreman extends User{
-    ArrayList<Brigade> brigadeList = new ArrayList<Brigade>();
-    ArrayList<Order> orderList = new ArrayList<Order>();
+    List<Brigade> brigadeList = new ArrayList<Brigade>();
+    List<Order> orderList = new ArrayList<Order>();
 
     Foreman(
     String name,
     String surname,
-    Date dateOfBirth,
+    LocalDateTime dateOfBirth,
     EmployeesDepartment department,
     String login,
     String password
@@ -22,10 +23,10 @@ public class Foreman extends User{
             password
         );
     }
-    public ArrayList<Brigade> getBrigadeList(){
+    public List<Brigade> getBrigadeList(){
         return this.brigadeList;
     }
-    public ArrayList<Order> getOrderList(){
+    public List<Order> getOrderList(){
         return this.orderList;
     }
 }

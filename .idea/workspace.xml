@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Class Employees -&gt; Employee">
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Changing Date to LocalDateTime">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682173316179</updated>
       <workItem from="1682173317230" duration="3740000" />
-      <workItem from="1682178755376" duration="3251000" />
+      <workItem from="1682178755376" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -111,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682180600215</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adding name, foreman, employeeList, addEmployee(both for single employee and list of employees) for Brigade.java">
+      <created>1682186128203</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682186128203</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changing Date to LocalDateTime">
+      <created>1682186176205</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682186176205</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +140,8 @@
     <MESSAGE value="Implementing Foreman" />
     <MESSAGE value="adding getOrderList" />
     <MESSAGE value="Class Employees -&gt; Employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class Employees -&gt; Employee" />
+    <MESSAGE value="Adding name, foreman, employeeList, addEmployee(both for single employee and list of employees) for Brigade.java" />
+    <MESSAGE value="Changing Date to LocalDateTime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing Date to LocalDateTime" />
   </component>
 </project>

@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeesDepartment {
     String name;
-    public ArrayList<Employee> employeeList = new ArrayList<Employee>();
-    public static ArrayList<String> nameList = new ArrayList<String>();
+    public List<Employee> employeeList = new ArrayList<Employee>();
+    public static List<String> nameList = new ArrayList<String>();
     private EmployeesDepartment(String name){
         if(nameList.contains(name)){
             throw new NotUniqueNameException("This name is not unique");
@@ -15,7 +16,7 @@ public class EmployeesDepartment {
         return new EmployeesDepartment(name);
     }
 
-    public ArrayList<Employee> getEmployeeList() {
+    public List<Employee> getEmployeeList() {
         return employeeList;
     }
 }

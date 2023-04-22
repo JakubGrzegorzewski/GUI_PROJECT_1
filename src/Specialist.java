@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Specialist extends Employee {
     String tekst;
@@ -6,7 +6,7 @@ public class Specialist extends Employee {
     Specialist(
     String name,
     String surname,
-    Date dateOfBirth,
+    LocalDateTime dateOfBirth,
     EmployeesDepartment department
     ) {
         super(
