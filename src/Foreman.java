@@ -23,7 +23,9 @@ public class Foreman extends User{
         );
     }
     public ArrayList<Brigade> getBrigadeList(){
-        System.out.println(this.brigadeList.toString());
         return this.brigadeList;
+    }
+    public ArrayList<Order> getOrderList(){
+        return this.orderList;
     }
 }
