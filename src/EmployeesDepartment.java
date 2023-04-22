@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class EmployeesDepartment {
     String name;
-    public ArrayList<Employees> employeeList = new ArrayList<Employees>();
+    public ArrayList<Employee> employeeList = new ArrayList<Employee>();
     public static ArrayList<String> nameList = new ArrayList<String>();
     private EmployeesDepartment(String name){
         if(nameList.contains(name)){
@@ -15,7 +15,7 @@ public class EmployeesDepartment {
         return new EmployeesDepartment(name);
     }
 
-    public ArrayList<Employees> getEmployeeList() {
+    public ArrayList<Employee> getEmployeeList() {
         return employeeList;
     }
 }

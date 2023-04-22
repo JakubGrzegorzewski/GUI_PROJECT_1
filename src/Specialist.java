@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Specialist extends Employees{
+public class Specialist extends Employee {
     String tekst;
 
     Specialist(

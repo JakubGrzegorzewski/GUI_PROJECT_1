@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class User extends Employees{
+public class User extends Employee {
     String login;
     String password;
     String initials;
