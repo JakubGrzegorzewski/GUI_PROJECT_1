@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class EmployeesDepartment {
-    private String name;
+    String name;
     public ArrayList<Employees> employeeList = new ArrayList<Employees>();
     public static ArrayList<String> nameList = new ArrayList<String>();
     private EmployeesDepartment(String name){
