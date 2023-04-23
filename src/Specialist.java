@@ -9,7 +9,8 @@ public class Specialist extends Employee {
     String name,
     String surname,
     LocalDateTime dateOfBirth,
-    Department department
+    Department department,
+    String specialization
     ) {
         super(
             name,
@@ -17,6 +18,7 @@ public class Specialist extends Employee {
             dateOfBirth,
             department
         );
+       this.specialization = specialization;
     }
 
     @Override
