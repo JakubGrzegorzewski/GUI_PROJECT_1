@@ -1,13 +1,15 @@
 import java.time.LocalDateTime;
 
 public class Specialist extends Employee {
-    String tekst;
+    long specialistID = counter++;
+    static long counter = 0;
+    String specialization;
 
     Specialist(
     String name,
     String surname,
     LocalDateTime dateOfBirth,
-    EmployeesDepartment department
+    Department department
     ) {
         super(
             name,
@@ -15,5 +17,12 @@ public class Specialist extends Employee {
             dateOfBirth,
             department
         );
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Specialist{" +
+                "specialization='" + specialization + '\'' +
+                '}';
     }
 }

@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Changing Date to LocalDateTime">
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeesDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Foreman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Specialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specialist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2OmknnnUMCMg0AIRnFDGe5GGQwB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -41,9 +50,15 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jakub\OneDrive\Dokumenty\!Projekty\Java\GUI_FirstProject" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +68,10 @@
       <option name="presentableId" value="Default" />
       <updated>1682173316179</updated>
       <workItem from="1682173317230" duration="3740000" />
-      <workItem from="1682178755376" duration="3958000" />
+      <workItem from="1682178755376" duration="6557000" />
+      <workItem from="1682193424463" duration="2749000" />
+      <workItem from="1682231569843" duration="1561000" />
+      <workItem from="1682240188003" duration="13537000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -125,7 +143,35 @@
       <option name="project" value="LOCAL" />
       <updated>1682186176205</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Date-&gt;LocalDateTime, ArrayList-&gt;List">
+      <created>1682186817512</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682186817512</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Addition of task PDF">
+      <created>1682193498873</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682193498873</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adding JobID, CounterID, Jobtype's, time, if completed, description,  list of jobs to wait on, list of all jobs, constructor, getObject by ID fo Job.java">
+      <created>1682245412966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682245412966</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders">
+      <created>1682245660235</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682245660235</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +188,10 @@
     <MESSAGE value="Class Employees -&gt; Employee" />
     <MESSAGE value="Adding name, foreman, employeeList, addEmployee(both for single employee and list of employees) for Brigade.java" />
     <MESSAGE value="Changing Date to LocalDateTime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing Date to LocalDateTime" />
+    <MESSAGE value="Date-&gt;LocalDateTime, ArrayList-&gt;List" />
+    <MESSAGE value="Addition of task PDF" />
+    <MESSAGE value="Adding JobID, CounterID, Jobtype's, time, if completed, description,  list of jobs to wait on, list of all jobs, constructor, getObject by ID fo Job.java" />
+    <MESSAGE value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
   </component>
 </project>

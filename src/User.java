@@ -1,6 +1,8 @@
 import java.time.LocalDateTime;
 
 public class User extends Employee {
+    long userID = counter++;
+    static long counter = 0;
     String login;
     String password;
     String initials;
@@ -9,7 +11,7 @@ public class User extends Employee {
     String name,
     String surname,
     LocalDateTime dateOfBirth,
-    EmployeesDepartment department,
+    Department department,
     String login,
     String password
     ) {
@@ -23,4 +25,21 @@ public class User extends Employee {
         this.password = password;
         this.initials = name.charAt(0) + "" + surname.charAt(0);
     }
+    boolean updateCredentials(String name, String surname){
+        if(name.isBlank() || surname.isBlank()){
+            if(!(name.isBlank() && surname.isBlank())){
+                if(name.isBlank())
+                    System.out.println("No name provided");
+                if(name.isBlank())
+                    System.out.println("No surname provided");
+            }
+            System.out.println("No name and surname provided");
+            return false;
+        }
+        super.setSurname(surname);
+        super.setName(name);
+        this.initials = name.charAt(0) + "" + surname.charAt(0);
+        return true;
+    }
+
 }
