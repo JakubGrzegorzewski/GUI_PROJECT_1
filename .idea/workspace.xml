@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeesDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Foreman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Specialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specialist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Optimization">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2223L_win_GUI_Projekt_Nr_1 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/taks.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +63,7 @@
       <workItem from="1682178755376" duration="6557000" />
       <workItem from="1682193424463" duration="2749000" />
       <workItem from="1682231569843" duration="1561000" />
-      <workItem from="1682240188003" duration="13537000" />
+      <workItem from="1682240188003" duration="14225000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -171,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682245660235</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Optimization">
+      <created>1682265032016</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682265032016</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Optimization">
+      <created>1682265160246</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682265160246</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +198,7 @@
     <MESSAGE value="Addition of task PDF" />
     <MESSAGE value="Adding JobID, CounterID, Jobtype's, time, if completed, description,  list of jobs to wait on, list of all jobs, constructor, getObject by ID fo Job.java" />
     <MESSAGE value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
+    <MESSAGE value="Optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimization" />
   </component>
 </project>
