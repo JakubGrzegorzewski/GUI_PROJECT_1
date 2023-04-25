@@ -2,12 +2,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class Job extends Thread{
-    long jobID = counter++;
-    static long counter = 0;
-    public enum JobType{
+    private final long jobID = counter++;
+    private static long counter = 0;
+    public enum Type {
         GENERAL, ASSEMBLY, DISASSEMBLY, REPLACEMENT;
     }
     private JobType jobType;
@@ -17,13 +16,12 @@ public class Job extends Thread{
     private Collection<Job> waitToEnd = new ArrayList<>();
     public static Map<Long, Object> allJobs = new HashMap<>();
 
-    Job(JobType jobType, int time, String description){
+    Job(Type type, int time, String description){
         allJobs.put(this.jobID, this);
-        this.jobType = jobType;
+        this.type = type;
         this.time = time;
         this.description = description;
 
-        System.out.println(jobType.toString() + " " + time + " " + description);
     }
 
     @Override
@@ -32,8 +30,10 @@ public class Job extends Thread{
         while (!flag){
             flag = true;
             for (Job job:waitToEnd) {
-                if(!job.completed)
+                if (!job.completed) {
                     flag = false;
+                    break;
+                }
             }
         }
 
