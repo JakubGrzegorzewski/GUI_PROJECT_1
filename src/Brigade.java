@@ -9,6 +9,11 @@ public class Brigade {
     private List<Employee> employeeList = new ArrayList<>();
     private boolean jobStatus = false;
 
+    Brigade(){
+        ArrayList<String> list = new ArrayList<>();
+        Log.write.create(Brigade.class, list);
+    }
+
     public void setJobStatus(boolean jobStatus) {
         for (Employee employee: employeeList)
             employee.setJobStatus(jobStatus);
