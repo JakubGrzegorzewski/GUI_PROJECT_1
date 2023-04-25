@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Brigade {
-    long brigadeID = counter++;
-    static long counter = 0;
+    private final long brigadeID = counter++;
+    private static long counter = 0;
     private String name;
     private Foreman foreman;
     private List<Employee> employeeList = new ArrayList<>();
@@ -11,7 +11,7 @@ public class Brigade {
 
     public void setJobStatus(boolean jobStatus) {
         for (Employee employee: employeeList)
-            employee.jobStatus = jobStatus;
+            employee.setJobStatus(jobStatus);
         this.jobStatus = jobStatus;
     }
 
@@ -52,5 +52,22 @@ public class Brigade {
 
     public List<Employee> getEmployeeList() {
         return employeeList;
+    }
+
+    public boolean getJobStatus() {
+        return jobStatus;
+    }
+
+
+    public long getBrigadeID() {
+        return this.brigadeID;
+    }
+    @Override
+    public String toString() {
+        return "["+ this.brigadeID + "]" +
+                " name:" + this.name +
+                " foreman:" + this.foreman.toString() +
+                " all employees:" + employeeList.toString() +
+                " at work:" + this.jobStatus;
     }
 }
