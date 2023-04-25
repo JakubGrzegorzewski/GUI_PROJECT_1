@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="PDF delete">
-      <change afterPath="$PROJECT_DIR$/src/Log.java" afterDir="false" />
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="logging User">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Foreman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Specialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specialist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +90,7 @@
       <workItem from="1682240188003" duration="14225000" />
       <workItem from="1682277793691" duration="3069000" />
       <workItem from="1682362200564" duration="5537000" />
-      <workItem from="1682397295091" duration="9199000" />
+      <workItem from="1682397295091" duration="11113000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -217,7 +211,161 @@
       <option name="project" value="LOCAL" />
       <updated>1682267117756</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adding toString and getJobStatus in Brigade.java">
+      <created>1682442047369</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442047369</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding Log.java">
+      <created>1682442081559</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442081559</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adding Loging to Brigade">
+      <created>1682442099537</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442099537</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Adding getDepartmentID and updating toString">
+      <created>1682442145938</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442145938</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Adding Loging to Department.java constructor">
+      <created>1682442165779</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442165779</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updating LocalDateTime tp LocalDate, adding getters for ID, jobstatus and setter to jobstatus">
+      <created>1682442268183</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442268183</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adding loging to Employee">
+      <created>1682442285730</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442285730</updated>
+    </task>
+    <task id="LOCAL-00025" summary="LocalDateTime -&gt; LocalDate, getter for ID, addding toString">
+      <created>1682442326261</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442326261</updated>
+    </task>
+    <task id="LOCAL-00026" summary="LocalDateTime -&gt; LocalDate, getter for ID, addding toString">
+      <created>1682442350236</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442350236</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Adding loging to constructor of Foreman.java">
+      <created>1682442383432</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442383432</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Updating Job.java">
+      <created>1682442419789</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442419789</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adding getter ID and ToString">
+      <created>1682442442809</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442442809</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adding loging to Job">
+      <created>1682442455604</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442455604</updated>
+    </task>
+    <task id="LOCAL-00031" summary="re-structoring constructors in Order">
+      <created>1682442548574</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442548574</updated>
+    </task>
+    <task id="LOCAL-00032" summary="adding if checking if brigade and employees are free">
+      <created>1682442599208</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442599208</updated>
+    </task>
+    <task id="LOCAL-00033" summary="adding getter ID and toString">
+      <created>1682442617715</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442617715</updated>
+    </task>
+    <task id="LOCAL-00034" summary="LocalDateTime-&gt;LocalDate">
+      <created>1682442637212</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442637212</updated>
+    </task>
+    <task id="LOCAL-00035" summary="To string update">
+      <created>1682442648365</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442648365</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Logging to Specialist">
+      <created>1682442658153</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442658153</updated>
+    </task>
+    <task id="LOCAL-00037" summary="LocalDateTime-&gt;LocalDate">
+      <created>1682442681690</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442681690</updated>
+    </task>
+    <task id="LOCAL-00038" summary="getter ID and to string">
+      <created>1682442696493</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442696493</updated>
+    </task>
+    <task id="LOCAL-00039" summary="logging User">
+      <created>1682442710199</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682442710199</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,22 +383,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init with all classes" />
-    <MESSAGE value="Adding nameList, employeeList, constructor method,createDepartment, getEmployeeList to the EmployeesDepartment.java. Also implementing RuntimeError when the name was already given" />
-    <MESSAGE value="Adding name, surname, dateOfBirth, employeesDepartment, allEmployees and compareTo to Employees.java" />
-    <MESSAGE value="Implementing Users, Specialist and both extends Employees" />
-    <MESSAGE value="Styling" />
-    <MESSAGE value="Implementing Foreman" />
-    <MESSAGE value="adding getOrderList" />
-    <MESSAGE value="Class Employees -&gt; Employee" />
-    <MESSAGE value="Adding name, foreman, employeeList, addEmployee(both for single employee and list of employees) for Brigade.java" />
-    <MESSAGE value="Changing Date to LocalDateTime" />
-    <MESSAGE value="Date-&gt;LocalDateTime, ArrayList-&gt;List" />
     <MESSAGE value="Addition of task PDF" />
     <MESSAGE value="Adding JobID, CounterID, Jobtype's, time, if completed, description,  list of jobs to wait on, list of all jobs, constructor, getObject by ID fo Job.java" />
     <MESSAGE value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
     <MESSAGE value="Optimization" />
     <MESSAGE value="PDF delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="PDF delete" />
+    <MESSAGE value="Adding toString and getJobStatus in Brigade.java" />
+    <MESSAGE value="Adding Log.java" />
+    <MESSAGE value="Adding Loging to Brigade" />
+    <MESSAGE value="Adding getDepartmentID and updating toString" />
+    <MESSAGE value="Adding Loging to Department.java constructor" />
+    <MESSAGE value="Updating LocalDateTime tp LocalDate, adding getters for ID, jobstatus and setter to jobstatus" />
+    <MESSAGE value="Adding loging to Employee" />
+    <MESSAGE value="LocalDateTime -&gt; LocalDate, getter for ID, addding toString" />
+    <MESSAGE value="Adding loging to constructor of Foreman.java" />
+    <MESSAGE value="Updating Job.java" />
+    <MESSAGE value="Adding getter ID and ToString" />
+    <MESSAGE value="Adding loging to Job" />
+    <MESSAGE value="re-structoring constructors in Order" />
+    <MESSAGE value="adding if checking if brigade and employees are free" />
+    <MESSAGE value="adding getter ID and toString" />
+    <MESSAGE value="To string update" />
+    <MESSAGE value="Logging to Specialist" />
+    <MESSAGE value="LocalDateTime-&gt;LocalDate" />
+    <MESSAGE value="getter ID and to string" />
+    <MESSAGE value="logging User" />
+    <option name="LAST_COMMIT_MESSAGE" value="logging User" />
   </component>
 </project>
