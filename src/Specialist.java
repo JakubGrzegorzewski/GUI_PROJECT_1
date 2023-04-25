@@ -22,10 +22,14 @@ public class Specialist extends Employee {
        this.specialization = specialization;
     }
 
+
     @Override
     public String toString() {
-        return super.toString() + "Specialist{" +
-                "specialization='" + specialization + '\'' +
-                '}';
+        return super.toString() + "["+ this.specialistID + "]" +
+                " Specialization:" + this.specialization;
+    }
+
+    public long getSpecialistID() {
+        return this.specialistID;
     }
 }
