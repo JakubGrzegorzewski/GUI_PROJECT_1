@@ -9,7 +9,7 @@ public class Job extends Thread{
     public enum Type {
         GENERAL, ASSEMBLY, DISASSEMBLY, REPLACEMENT;
     }
-    private JobType jobType;
+    private Type type;
     private int time;
     private boolean completed = false;
     private String description;
@@ -45,7 +45,19 @@ public class Job extends Thread{
         this.completed = true;
     }
 
+    public long getJobID() {
+        return this.jobID;
+    }
+
     public static Object getObject(int id){
         return allJobs.get(id);
+    }
+
+    @Override
+    public String toString() {
+        return "["+ this.jobID + "]" +
+                " Is completed:" + this.completed +
+                " Type:" + this.type.toString() +
+                " Description:" + this.description;
     }
 }
