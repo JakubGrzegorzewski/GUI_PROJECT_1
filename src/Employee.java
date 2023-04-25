@@ -1,23 +1,23 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public abstract class Employee implements Comparable<Employee>{
-    long employeeID = counter++;
-    static long counter = 0;
+    private final long employeeID = counter++;
+    private static long counter = 0;
     private String name;
     private String surname;
-    private LocalDateTime dateOfBirth;
+    private LocalDate dateOfBirth;
     private Department department;
-    public boolean jobStatus = false;
+    private boolean jobStatus = false;
 
     public static List<Employee> allEmployees = new ArrayList<>();
 
     Employee(
             String name,
             String surname,
-            LocalDateTime dateOfBirth,
+            LocalDate dateOfBirth,
             Department department
     ){
         allEmployees.add(this);
@@ -58,12 +58,22 @@ public abstract class Employee implements Comparable<Employee>{
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeID=" + employeeID +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", department=" + department +
-                '}';
+        return "["+ this.employeeID + "]" +
+                " name" + this.name +
+                " surname" + this.surname +
+                " dateOfBirth" + this.dateOfBirth +
+                " department" + this.department;
+    }
+
+
+    public long getEmployeeID() {
+        return this.employeeID;
+    }
+    public boolean getJobStatus() {
+        return jobStatus;
+    }
+
+    public void setJobStatus(boolean jobStatus) {
+        this.jobStatus = jobStatus;
     }
 }
