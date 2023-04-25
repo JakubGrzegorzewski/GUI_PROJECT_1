@@ -119,4 +119,18 @@ public class Order implements Runnable{
         this.jobStatus = JobStatus.ENDED;
         this.endTime = LocalDateTime.now();
     }
+    public long getOrderID() {
+        return this.orderID;
+    }
+    @Override
+    public String toString() {
+        return "["+ this.orderID + "]" +
+                " planing status:" + this.planningStatus.toString() +
+                " job status:" + this.jobStatus +
+                " brigade:" + this.assignedBrigade.toString() +
+                " created at:" + this.creationTime +
+                " stated at:" + this.startTime +
+                " ended at:" + this.endTime;
+
+    }
 }
