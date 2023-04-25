@@ -1,17 +1,17 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Foreman extends User{
-    long foremanID = counter++;
-    static long counter = 0;
+    private final long foremanID = counter++;
+    private static long counter = 0;
     private List<Brigade> brigadeList = new ArrayList<>();
     private List<Order> orderList = new ArrayList<>();
 
     Foreman(
     String name,
     String surname,
-    LocalDateTime dateOfBirth,
+    LocalDate dateOfBirth,
     Department department,
     String login,
     String password
@@ -43,5 +43,16 @@ public class Foreman extends User{
         this.orderList.add(order);
         return true;
 
+    }
+
+    public long getForemanID() {
+        return this.foremanID;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "["+ this.foremanID + "]" +
+                " list of brigades:" + this.brigadeList +
+                " list of orders:" + this.orderList;
     }
 }
