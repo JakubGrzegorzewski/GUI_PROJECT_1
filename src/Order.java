@@ -92,7 +92,8 @@ public class Order implements Runnable{
     }
 
     public void startOrder(){
-        //create this
+        Thread thread = new Thread(this);
+        thread.start();
     }
 
     @Override

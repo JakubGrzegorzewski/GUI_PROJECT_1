@@ -34,6 +34,7 @@ public class Job extends Thread{
     public void run() {
         boolean flag = false;
         while (!flag){
+            System.out.println("Test");
             flag = true;
             for (Job job:waitToEnd) {
                 if (!job.completed) {
@@ -50,6 +51,8 @@ public class Job extends Thread{
             }
         }
         this.completed = true;
+        System.out.println("Test-end");
+
     }
 
     public long getJobID() {
