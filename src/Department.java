@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
-    long DepartmentID = counter++;
-    public static long counter = 0;
+    private final long departmentID = counter++;
+    private static long counter = 0;
     String name;
     public List<Employee> employeeList = new ArrayList<>();
     public static List<String> nameList = new ArrayList<>();
@@ -30,11 +30,14 @@ public class Department {
         return true;
     }
 
+    public long getDepartmentID() {
+        return this.departmentID;
+    }
+
     @Override
     public String toString() {
-        return "Department{" +
-                "DepartmentID=" + DepartmentID +
-                ", name='" + name + '\'' +
-                '}';
+        return "["+ this.departmentID + "]" +
+                " name" + name;
     }
+
 }
