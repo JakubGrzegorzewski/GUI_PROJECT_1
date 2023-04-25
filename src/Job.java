@@ -21,6 +21,12 @@ public class Job extends Thread{
         this.type = type;
         this.time = time;
         this.description = description;
+        ArrayList<String> list = new ArrayList<>();
+        list.add(type.toString());
+        list.add(time+"");
+        list.add(description);
+        System.out.println(type.toString() + " " + time + " " + description);
+        Log.write.create(Job.class, list);
 
     }
 
