@@ -25,6 +25,12 @@ public abstract class Employee implements Comparable<Employee>{
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
         this.department = department;
+        ArrayList<String> list = new ArrayList<>();
+        list.add(name);
+        list.add(surname);
+        list.add(dateOfBirth.toString());
+        list.add(department.getDepartmentID()+"");
+        Log.write.create(Employee.class, list);
     }
 
     public boolean setDepartment(Department department){
