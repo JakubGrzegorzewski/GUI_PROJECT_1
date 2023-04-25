@@ -24,6 +24,14 @@ public class Foreman extends User{
             login,
             password
         );
+        ArrayList<String> list = new ArrayList<>();
+        list.add(name);
+        list.add(surname);
+        list.add(dateOfBirth.toString());
+        list.add(department.getDepartmentID()+"");
+        list.add(login);
+        list.add(password);
+        Log.write.create(Foreman.class,list);
     }
     public List<Brigade> getBrigadeList(){
         return this.brigadeList;
