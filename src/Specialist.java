@@ -1,14 +1,15 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Specialist extends Employee {
-    long specialistID = counter++;
-    static long counter = 0;
+    private final long specialistID = counter++;
+    private static long counter = 0;
     String specialization;
 
     Specialist(
     String name,
     String surname,
-    LocalDateTime dateOfBirth,
+    LocalDate dateOfBirth,
     Department department,
     String specialization
     ) {
