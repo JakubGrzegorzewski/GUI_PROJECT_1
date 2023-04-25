@@ -25,6 +25,13 @@ public class User extends Employee {
         this.login = login;
         this.password = password;
         this.initials = name.charAt(0) + "" + surname.charAt(0);
+        ArrayList<String> list = new ArrayList<>();
+        list.add(name);
+        list.add(surname);
+        list.add(department.getDepartmentID()+"");
+        list.add(login);
+        list.add(password);
+        Log.write.create(User.class, list);
     }
     boolean updateCredentials(String name, String surname){
         if(name.isBlank() || surname.isBlank()){
