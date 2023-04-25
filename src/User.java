@@ -43,4 +43,15 @@ public class User extends Employee {
         return true;
     }
 
+    public long getUserID() {
+        return this.userID;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "["+ this.userID + "]" +
+                " Initials:" + this.initials +
+                " Login:" + this.login +
+                " Password:" + this.password;
+    }
 }
