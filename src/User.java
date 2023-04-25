@@ -1,8 +1,9 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class User extends Employee {
-    long userID = counter++;
-    static long counter = 0;
+    private final long userID = counter++;
+    private static long counter = 0;
     String login;
     String password;
     String initials;
@@ -10,7 +11,7 @@ public class User extends Employee {
     User(
     String name,
     String surname,
-    LocalDateTime dateOfBirth,
+    LocalDate dateOfBirth,
     Department department,
     String login,
     String password
