@@ -13,6 +13,9 @@ public class Department {
         }
         nameList.add(name);
         this.name = name;
+        ArrayList<String> list = new ArrayList<>();
+        list.add(this.name);
+        Log.write.create(Department.class, list);
     }
     public static Department createDepartment(String name){
         return new Department(name);
