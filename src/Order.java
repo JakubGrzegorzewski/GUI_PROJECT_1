@@ -70,6 +70,7 @@ public class Order implements Runnable{
         this.assignedBrigade = brigade;
         this.assignedBrigade.getForeman().addOrder(this);
         return true;
+    }
 
 
 
@@ -103,9 +104,12 @@ public class Order implements Runnable{
                 boolean allFree = false;
                 while(!allFree){
                     allFree = true;
-                    for (Employee employee:this.assignedBrigade.getEmployeeList())
-                        if (!employee.jobStatus)
-                            allFree = false;
+                    if (!this.assignedBrigade.getJobStatus())
+                        for (Employee employee:this.assignedBrigade.getEmployeeList())
+                            if (!employee.getJobStatus()) {
+                                allFree = false;
+                                break;
+                            }
                 }
                 this.assignedBrigade.setJobStatus(true);
                 job.start();
