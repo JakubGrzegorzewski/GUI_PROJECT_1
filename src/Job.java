@@ -42,11 +42,12 @@ public class Job extends Thread{
                 }
             }
         }
-
-        try {
-            this.wait(this.time* 1000L);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        synchronized (this){
+            try {
+                this.wait(this.time* 1000L);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
         this.completed = true;
     }
