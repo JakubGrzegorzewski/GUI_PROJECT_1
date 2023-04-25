@@ -1,12 +1,9 @@
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Order implements Runnable{
-    long orderID = counter++;
-    static long counter = 0;
+    private final long orderID = counter++;
+    private static long counter = 0;
 
     private LocalDateTime creationTime;
     private LocalDateTime startTime;
@@ -26,27 +23,45 @@ public class Order implements Runnable{
         CREATED, STARTED, ENDED;
     }
 
-    Order(boolean planned){
-        allOrders.put(orderID, this);
-        if (planned)
-            planningStatus = PlanningStatus.PLANNED;
-        else
-            planningStatus = PlanningStatus.UNPLANNED;
-        this.creationTime = LocalDateTime.now();
-        this.jobStatus = JobStatus.CREATED;
+    Order(boolean planned) {
+        new Order(planned, null, null);
+
     }
     Order(boolean planned, Brigade brigade){
-        new Order(planned);
-        addBrigade(brigade);
+        new Order(planned, null, brigade);
+
+
+
     }
     Order(boolean planned, List<Job> jobs){
-        new Order(planned);
-        this.assignedJobs = jobs;
+        new Order(planned, jobs, null);
     }
     Order(boolean planned, List<Job> jobs, Brigade brigade){
-        new Order(planned);
-        addBrigade(brigade);
-        this.assignedBrigade = brigade;
+        this.allOrders.put(orderID, this);
+        if (planned)
+            this.planningStatus = PlanningStatus.PLANNED;
+        else
+            this.planningStatus = PlanningStatus.UNPLANNED;
+        this.creationTime = LocalDateTime.now();
+        this.jobStatus = JobStatus.CREATED;
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add(Boolean.toString(planned));
+
+        if (jobs != null) {
+            this.assignedJobs = jobs;
+            list.add(jobs.toString());
+        }
+        else
+            list.add("null");
+
+        if (brigade != null) {
+            addBrigade(brigade);
+            list.add(""+brigade.getBrigadeID());
+        }
+        else
+            list.add("null");
+        Log.write.create(Order.class, list);
     }
 
     public boolean addBrigade(Brigade brigade){
@@ -58,9 +73,10 @@ public class Order implements Runnable{
 
 
 
-    }
     public boolean addJob(Job job){
-        if(this.assignedJobs != null || this.assignedJobs.contains(job))
+        if(this.assignedJobs == null)
+            return false;
+        if (this.assignedJobs.contains(job))
             return false;
         this.assignedJobs.add(job);
         return true;
@@ -75,7 +91,7 @@ public class Order implements Runnable{
     }
 
     public void startOrder(){
-        
+        //create this
     }
 
     @Override
