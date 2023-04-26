@@ -8,8 +8,8 @@ public abstract class Employee implements Comparable<Employee>{
     private static long counter = 0;
     private String name;
     private String surname;
-    private LocalDate dateOfBirth;
-    private Department department;
+    private final LocalDate dateOfBirth;
+    private final Department department;
     private boolean jobStatus = false;
 
     public static List<Employee> allEmployees = new ArrayList<>();
@@ -25,21 +25,7 @@ public abstract class Employee implements Comparable<Employee>{
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
         this.department = department;
-        ArrayList<String> list = new ArrayList<>();
-        list.add(name);
-        list.add(surname);
-        list.add(dateOfBirth.toString());
-        list.add(department.getDepartmentID()+"");
-        Log.write.create(Employee.class, list);
-    }
 
-    public boolean setDepartment(Department department){
-        if(this.department != null){
-            System.out.println("The department is already set to: " + this.department);
-            return false;
-        }
-        this.department = department;
-        return true;
     }
 
     protected void setName(String name) {
@@ -48,6 +34,14 @@ public abstract class Employee implements Comparable<Employee>{
 
     protected void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 
     @Override
@@ -65,10 +59,10 @@ public abstract class Employee implements Comparable<Employee>{
     @Override
     public String toString() {
         return "["+ this.employeeID + "]" +
-                " name" + this.name +
-                " surname" + this.surname +
-                " dateOfBirth" + this.dateOfBirth +
-                " department" + this.department;
+                " name:" + this.name +
+                " surname:" + this.surname +
+                " dateOfBirth:" + this.dateOfBirth +
+                " department:" + this.department;
     }
 
 
@@ -78,7 +72,6 @@ public abstract class Employee implements Comparable<Employee>{
     public boolean getJobStatus() {
         return jobStatus;
     }
-
     public void setJobStatus(boolean jobStatus) {
         this.jobStatus = jobStatus;
     }

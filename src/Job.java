@@ -9,11 +9,11 @@ public class Job extends Thread{
     public enum Type {
         GENERAL, ASSEMBLY, DISASSEMBLY, REPLACEMENT;
     }
-    private Type type;
-    private int time;
+    private final Type type;
+    private final int time;
     private boolean completed = false;
-    private String description;
-    private Collection<Job> waitToEnd = new ArrayList<>();
+    private final String description;
+    private final Collection<Job> waitToEnd = new ArrayList<>();
     public static Map<Long, Object> allJobs = new HashMap<>();
 
     Job(Type type, int time, String description){
@@ -21,13 +21,7 @@ public class Job extends Thread{
         this.type = type;
         this.time = time;
         this.description = description;
-        ArrayList<String> list = new ArrayList<>();
-        list.add(type.toString());
-        list.add(time+"");
-        list.add(description);
-        System.out.println(type.toString() + " " + time + " " + description);
-        Log.write.create(Job.class, list);
-
+        Log.create.classes(this.getClass(), type, time, description);
     }
 
     @Override
@@ -44,20 +38,28 @@ public class Job extends Thread{
         }
         synchronized (this){
             try {
-                this.wait(this.time* 1000L);
+                for (int i = 0; i < this.time; i++) {
+                    this.wait(1000L);
+
+                }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
         this.completed = true;
-
     }
 
     public long getJobID() {
         return this.jobID;
     }
+    public void addJobToWait(Job job){
+        this.waitToEnd.add(job);
+        try{
+            Log.create.methods(this, Job.class.getDeclaredMethod("addJobToWait", Job.class), job);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
+    }
 
-    public static Object getObject(int id){
+    public static Object getObject(long id){
         return allJobs.get(id);
     }
 

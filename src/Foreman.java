@@ -5,8 +5,8 @@ import java.util.List;
 public class Foreman extends User{
     private final long foremanID = counter++;
     private static long counter = 0;
-    private List<Brigade> brigadeList = new ArrayList<>();
-    private List<Order> orderList = new ArrayList<>();
+    private final List<Brigade> brigadeList = new ArrayList<>();
+    private final List<Order> orderList = new ArrayList<>();
 
     Foreman(
     String name,
@@ -24,14 +24,7 @@ public class Foreman extends User{
             login,
             password
         );
-        ArrayList<String> list = new ArrayList<>();
-        list.add(name);
-        list.add(surname);
-        list.add(dateOfBirth.toString());
-        list.add(department.getDepartmentID()+"");
-        list.add(login);
-        list.add(password);
-        Log.write.create(Foreman.class,list);
+        Log.create.classes(this.getClass(), name, surname, dateOfBirth, department, login, password);
     }
     public List<Brigade> getBrigadeList(){
         return this.brigadeList;
@@ -43,24 +36,30 @@ public class Foreman extends User{
         if(this.brigadeList.contains(brigade))
             return false;
         this.brigadeList.add(brigade);
+        try{
+            Log.create.methods(this, Foreman.class.getDeclaredMethod("addBrigade", Brigade.class), brigade);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
         return true;
     }
     public boolean addOrder(Order order){
         if(this.orderList.contains(order))
             return false;
         this.orderList.add(order);
+        try{
+            Log.create.methods(this, Foreman.class.getDeclaredMethod("addOrder", Order.class), order);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
         return true;
 
     }
-
     public long getForemanID() {
         return this.foremanID;
     }
 
+
+
     @Override
     public String toString() {
-        return super.toString() + "["+ this.foremanID + "]" +
-                " list of brigades:" + this.brigadeList +
-                " list of orders:" + this.orderList;
+        return super.toString() + "["+ this.getForemanID() + "]" +
+                " list of orders:" + this.getOrderList().toString();
     }
 }

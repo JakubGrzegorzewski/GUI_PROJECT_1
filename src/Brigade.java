@@ -6,18 +6,20 @@ public class Brigade {
     private static long counter = 0;
     private String name;
     private Foreman foreman;
-    private List<Employee> employeeList = new ArrayList<>();
+    private final List<Employee> employeeList = new ArrayList<>();
     private boolean jobStatus = false;
 
     Brigade(){
-        ArrayList<String> list = new ArrayList<>();
-        Log.write.create(Brigade.class, list);
+        Log.create.classes(this.getClass());
     }
 
     public void setJobStatus(boolean jobStatus) {
         for (Employee employee: employeeList)
             employee.setJobStatus(jobStatus);
         this.jobStatus = jobStatus;
+        try{
+        Log.create.methods(this, Brigade.class.getDeclaredMethod("setJobStatus", boolean.class), jobStatus);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
     }
 
     public void addEmployee(Employee employee){
@@ -30,15 +32,24 @@ public class Brigade {
                 employeeList.add(employee);
 
         }
+        try{
+            Log.create.methods(this, Brigade.class.getDeclaredMethod("addEmployee", Employee.class), employee);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
     }
     public void addEmployee(List<Employee> employees){
         for (Employee employee:employees)
             addEmployee(employee);
+        try{
+            Log.create.methods(this, Brigade.class.getDeclaredMethod("addEmployee", List.class), employees);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
 
     }
 
     public void setName(String name) {
         this.name = name;
+        try{
+            Log.create.methods(this, Brigade.class.getDeclaredMethod("setJobStatus", boolean.class), jobStatus);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
     }
 
     public String getName() {
@@ -48,6 +59,9 @@ public class Brigade {
     public boolean setForeman(Foreman foreman) {
         this.foreman = foreman;
         foreman.addBrigade(this);
+        try{
+            Log.create.methods(this, Brigade.class.getDeclaredMethod("setForeman", Foreman.class), foreman);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
         return true;
     }
 
@@ -69,10 +83,17 @@ public class Brigade {
     }
     @Override
     public String toString() {
-        return "["+ this.brigadeID + "]" +
-                " name:" + this.name +
-                " foreman:" + this.foreman.toString() +
-                " all employees:" + employeeList.toString() +
-                " at work:" + this.jobStatus;
+        if (this.foreman!=null)
+            return "["+ this.getBrigadeID() + "]" +
+                    " name:" + this.getName() +
+                    " foreman:" + this.getForeman().toString() +
+                    " all employees:" + this.getEmployeeList().toString() +
+                    " at work:" + this.getJobStatus();
+        else
+            return "["+ this.getBrigadeID() + "]" +
+                    " name:" + this.getName() +
+                    " foreman:" + null +
+                    " all employees:" + this.getEmployeeList().toString() +
+                    " at work:" + this.getJobStatus();
     }
 }

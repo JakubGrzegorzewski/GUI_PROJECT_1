@@ -10,17 +10,17 @@ public class Order implements Runnable{
     private LocalDateTime endTime;
 
     private PlanningStatus planningStatus;
-    private JobStatus jobStatus;
+    private OrderStatus orderStatus;
     private Brigade assignedBrigade;
 
     private List<Job> assignedJobs = new ArrayList<>();
     public static Map<Long, Object> allOrders = new HashMap<>();
 
     public enum PlanningStatus {
-        PLANNED, UNPLANNED;
+        PLANNED, UNPLANNED
     }
-    public enum JobStatus{
-        CREATED, STARTED, ENDED;
+    public enum OrderStatus {
+        CREATED, STARTED, ENDED
     }
 
     Order(boolean planned) {
@@ -43,43 +43,56 @@ public class Order implements Runnable{
         else
             this.setPlanningStatus(PlanningStatus.UNPLANNED);
         this.setCreationTime();
-        this.setJobStatus(JobStatus.CREATED);
+        this.setOrderStatus(OrderStatus.CREATED);
+        if (jobs != null)
+            this.addJob(jobs);
+        if (brigade != null)
+            this.addBrigade(brigade);
+        Log.create.classes(this.getClass(),planned, jobs, brigade);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add(Boolean.toString(planned));
-
-        if (jobs != null) {
-            this.setAssignedJobs(jobs);
-            list.add(jobs.toString());
-        }
-        else
-            list.add("null");
-
-        if (brigade != null) {
-            this.setBrigade(brigade);
-            list.add(""+brigade.getBrigadeID());
-        }
-        else
-            list.add("null");
-        Log.write.create(Order.class, list);
     }
 
-    public boolean addJob(Job job){
+    private void addJob(List<Job> jobs) {
+        for (Job job:jobs) {
+            addJob(job);
+        }
+    }
+    public boolean addJob(Job job) {
         if(this.getAssignedJobs() == null || this.getAssignedJobs().contains(job))
             return false;
         this.assignedJobs.add(job);
+        try{
+            Log.create.methods(this, Order.class.getDeclaredMethod("addJob", Job.class),job);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
+        return true;
+    }
+
+    public boolean addBrigade(Brigade brigade){
+        if(this.assignedBrigade != null)
+            return false;
+        this.assignedBrigade = brigade;
+        this.assignedBrigade.getForeman().addOrder(this);
+        try{
+            Log.create.methods(this, Order.class.getDeclaredMethod("setBrigade", Brigade.class),brigade);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
         return true;
     }
 
     public void startOrder(){
         Thread thread = new Thread(this);
         thread.start();
+        try{
+            Log.create.methods(this, Order.class.getDeclaredMethod("startOrder"));
+        }catch (NoSuchMethodException e){e.printStackTrace();}
+    }
+    public void endOrder(){
+
     }
 
     @Override
     public void run() {
         this.setStartTime();
-        this.setJobStatus(JobStatus.STARTED);
+        this.setOrderStatus(OrderStatus.STARTED);
         if(!this.getAssignedJobs().isEmpty() && this.getAssignedJobs() != null) {
             for (Job job: this.getAssignedJobs()) {
                 boolean allFree = false;
@@ -97,14 +110,14 @@ public class Order implements Runnable{
                 this.getAssignedBrigade().setJobStatus(false);
             }
         }
-        this.setJobStatus(JobStatus.ENDED);
+        this.setOrderStatus(OrderStatus.ENDED);
         this.setEndTime();
     }
     @Override
     public String toString() {
         return "["+ this.getOrderID() + "]" +
                 " planing status:" + this.getPlanningStatus().toString() +
-                " job status:" + this.getJobStatus() +
+                " job status:" + this.getOrderStatus() +
                 " brigade:" + this.getAssignedBrigade().toString() +
                 " created at:" + this.getCreationTime() +
                 " stated at:" + this.getStartTime() +
@@ -149,34 +162,23 @@ public class Order implements Runnable{
         this.planningStatus = planningStatus;
     }
 
-    public JobStatus getJobStatus() {
-        return jobStatus;
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
     }
 
-    private void setJobStatus(JobStatus jobStatus) {
-        this.jobStatus = jobStatus;
+    private void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
     public Brigade getAssignedBrigade() {
         return assignedBrigade;
     }
 
-    public void setBrigade(Brigade brigade){
-        if(this.assignedBrigade != null)
-            return;
-        this.assignedBrigade = brigade;
-        this.assignedBrigade.getForeman().addOrder(this);
-    }
-
     public List<Job> getAssignedJobs() {
         return assignedJobs;
     }
 
-    public void setAssignedJobs(List<Job> assignedJobs) {
-        this.assignedJobs = assignedJobs;
-    }
-
-    public static void addOrderToAllOrders(Order order){
+    private static void addOrderToAllOrders(Order order){
         Order.allOrders.put(order.getOrderID(), order);
     }
 

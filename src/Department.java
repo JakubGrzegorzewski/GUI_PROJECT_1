@@ -13,24 +13,17 @@ public class Department {
         }
         nameList.add(name);
         this.name = name;
-        ArrayList<String> list = new ArrayList<>();
-        list.add(this.name);
-        Log.write.create(Department.class, list);
     }
     public static Department createDepartment(String name){
-        return new Department(name);
+        Department department = new Department(name);
+        try{
+            Log.create.methods(department, Department.class.getDeclaredMethod("createDepartment", String.class), name);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
+        return department;
     }
 
     public List<Employee> getEmployeeList() {
         return employeeList;
-    }
-    public boolean addEmployee(Employee employee){
-        if(employeeList.contains(employee)) {
-            System.out.println("Employee " + employee + " is already added");
-            return false;
-        }
-        employeeList.add(employee);
-        return true;
     }
 
     public long getDepartmentID() {
@@ -40,7 +33,7 @@ public class Department {
     @Override
     public String toString() {
         return "["+ this.departmentID + "]" +
-                " name" + name;
+                " name:" + name;
     }
 
 }

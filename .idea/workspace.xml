@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="logging User">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Adding all getters and setters to Order.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Foreman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Specialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specialist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +96,7 @@
       <workItem from="1682240188003" duration="14225000" />
       <workItem from="1682277793691" duration="3069000" />
       <workItem from="1682362200564" duration="5537000" />
-      <workItem from="1682397295091" duration="11113000" />
+      <workItem from="1682397295091" duration="31733000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -365,7 +371,35 @@
       <option name="project" value="LOCAL" />
       <updated>1682442710199</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fixing wait bug">
+      <created>1682443912462</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1682443912462</updated>
+    </task>
+    <task id="LOCAL-00041" summary="adding startOrder">
+      <created>1682443968978</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1682443968978</updated>
+    </task>
+    <task id="LOCAL-00042" summary="removing System.out.println">
+      <created>1682444036063</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1682444036063</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Adding all getters and setters to Order.java">
+      <created>1682481147035</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1682481147035</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,10 +417,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Addition of task PDF" />
-    <MESSAGE value="Adding JobID, CounterID, Jobtype's, time, if completed, description,  list of jobs to wait on, list of all jobs, constructor, getObject by ID fo Job.java" />
-    <MESSAGE value="Adding orderID, CounterID, startTime, endTime, planningStatus, jobStatus, assignedBrigade, assignedJobs, allOrders" />
-    <MESSAGE value="Optimization" />
     <MESSAGE value="PDF delete" />
     <MESSAGE value="Adding toString and getJobStatus in Brigade.java" />
     <MESSAGE value="Adding Log.java" />
@@ -408,6 +438,17 @@
     <MESSAGE value="LocalDateTime-&gt;LocalDate" />
     <MESSAGE value="getter ID and to string" />
     <MESSAGE value="logging User" />
-    <option name="LAST_COMMIT_MESSAGE" value="logging User" />
+    <MESSAGE value="fixing wait bug" />
+    <MESSAGE value="adding startOrder" />
+    <MESSAGE value="removing System.out.println" />
+    <MESSAGE value="Adding all getters and setters to Order.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding all getters and setters to Order.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.Boolean" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

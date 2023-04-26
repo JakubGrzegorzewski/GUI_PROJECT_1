@@ -20,13 +20,8 @@ public class Specialist extends Employee {
             department
         );
        this.specialization = specialization;
-        ArrayList<String> list = new ArrayList<>();
-        list.add(name);
-        list.add(surname);
-        list.add(dateOfBirth.toString());
-        list.add(department.getDepartmentID()+"");
-        list.add(specialization);
-       Log.write.create(Specialist.class, list);
+       Log.create.classes(this.getClass(), name,surname,dateOfBirth,department,specialization);
+
     }
 
 
