@@ -7,7 +7,7 @@ public class Job extends Thread{
     private final long jobID = counter++;
     private static long counter = 0;
     public enum Type {
-        GENERAL, ASSEMBLY, DISASSEMBLY, REPLACEMENT;
+        GENERAL, ASSEMBLY, DISASSEMBLY, REPLACEMENT
     }
     private final Type type;
     private final int time;

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="Adding all getters and setters to Order.java">
+    <list default="true" id="ee6bdd57-2829-4113-920f-409a805bef70" name="Changes" comment="I don't care maybe change later v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brigade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brigade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Foreman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Specialist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Specialist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
@@ -96,7 +93,7 @@
       <workItem from="1682240188003" duration="14225000" />
       <workItem from="1682277793691" duration="3069000" />
       <workItem from="1682362200564" duration="5537000" />
-      <workItem from="1682397295091" duration="31733000" />
+      <workItem from="1682397295091" duration="34770000" />
     </task>
     <task id="LOCAL-00001" summary="Init with all classes">
       <created>1682173772785</created>
@@ -399,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682481147035</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="I don't care maybe change later">
+      <created>1682535569038</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1682535569038</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,8 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PDF delete" />
-    <MESSAGE value="Adding toString and getJobStatus in Brigade.java" />
     <MESSAGE value="Adding Log.java" />
     <MESSAGE value="Adding Loging to Brigade" />
     <MESSAGE value="Adding getDepartmentID and updating toString" />
@@ -442,9 +444,35 @@
     <MESSAGE value="adding startOrder" />
     <MESSAGE value="removing System.out.println" />
     <MESSAGE value="Adding all getters and setters to Order.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding all getters and setters to Order.java" />
+    <MESSAGE value="I don't care maybe change later" />
+    <MESSAGE value="I don't care maybe change later v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="I don't care maybe change later v2" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Order.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Order.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Order.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Order.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.Boolean" memberName="value" />

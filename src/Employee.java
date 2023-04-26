@@ -74,5 +74,8 @@ public abstract class Employee implements Comparable<Employee>{
     }
     public void setJobStatus(boolean jobStatus) {
         this.jobStatus = jobStatus;
+        try{
+            Log.create.methods(this, Employee.class.getDeclaredMethod("setJobStatus", boolean.class), jobStatus);
+        }catch (NoSuchMethodException e){e.printStackTrace();}
     }
 }

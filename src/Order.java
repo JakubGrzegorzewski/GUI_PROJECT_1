@@ -13,7 +13,7 @@ public class Order implements Runnable{
     private OrderStatus orderStatus;
     private Brigade assignedBrigade;
 
-    private List<Job> assignedJobs = new ArrayList<>();
+    private final List<Job> assignedJobs = new ArrayList<>();
     public static Map<Long, Object> allOrders = new HashMap<>();
 
     public enum PlanningStatus {
@@ -73,7 +73,7 @@ public class Order implements Runnable{
         this.assignedBrigade = brigade;
         this.assignedBrigade.getForeman().addOrder(this);
         try{
-            Log.create.methods(this, Order.class.getDeclaredMethod("setBrigade", Brigade.class),brigade);
+            Log.create.methods(this, Order.class.getDeclaredMethod("addBrigade", Brigade.class),brigade);
         }catch (NoSuchMethodException e){e.printStackTrace();}
         return true;
     }
@@ -84,9 +84,6 @@ public class Order implements Runnable{
         try{
             Log.create.methods(this, Order.class.getDeclaredMethod("startOrder"));
         }catch (NoSuchMethodException e){e.printStackTrace();}
-    }
-    public void endOrder(){
-
     }
 
     @Override
@@ -100,7 +97,7 @@ public class Order implements Runnable{
                     allFree = true;
                     if (!this.getAssignedBrigade().getJobStatus())
                         for (Employee employee:this.getAssignedBrigade().getEmployeeList())
-                            if (!employee.getJobStatus()) {
+                            if (employee.getJobStatus()) {
                                 allFree = false;
                                 break;
                             }

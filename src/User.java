@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class User extends Employee {
     private final long userID = counter++;
@@ -24,7 +23,7 @@ public class User extends Employee {
         );
         this.login = login;
         this.password = password;
-        this.initials = name.charAt(0) + "" + surname.charAt(0);
+        this.initials = String.valueOf(name.charAt(0)).concat(String.valueOf(surname.charAt(0)));
         Log.create.classes(this.getClass(), name,surname,dateOfBirth,department,login,password);
 
     }
@@ -53,7 +52,7 @@ public class User extends Employee {
         }
         super.setSurname(surname);
         super.setName(name);
-        this.initials = name.charAt(0) + "" + surname.charAt(0);
+        this.initials = String.valueOf(name.charAt(0)).concat(String.valueOf(surname.charAt(0)));
         try{
             Log.create.methods(this, User.class.getDeclaredMethod("updateCredentials", String.class, String.class),name, surname);
         }catch (NoSuchMethodException e){e.printStackTrace();}

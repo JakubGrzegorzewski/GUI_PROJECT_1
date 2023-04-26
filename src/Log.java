@@ -1,6 +1,5 @@
 import java.io.*;
 import java.lang.reflect.Method;
-import java.util.ArrayList;;
 import java.util.List;
 
 
@@ -44,9 +43,7 @@ static class create {
             Log.openWriteLog();
             String argumentList = "";
             for (Object obj:arguments) {
-                if (obj.getClass() != ArrayList.class)
-                    argumentList = argumentList.concat(catagoriseArgument(obj)) + ",";
-                else argumentList = argumentList.concat(catagoriseArgument((List) obj)) + ",";
+                argumentList = argumentList.concat(categorizeArgument(obj)) + ",";
             }
             writer.write(
                     name.getName() + ":" + " "
@@ -63,12 +60,8 @@ static class create {
             Log.openWriteLog();
             String argumentList = "";
             for (Object obj:arguments) {
-                if (obj.getClass() != List.class)
-                    argumentList = argumentList.concat(catagoriseArgument(obj)) +
-                    ",";
-                else if(obj.getClass() == ArrayList.class)
-                    argumentList = argumentList.concat(catagoriseArgument(obj)) +
-                    ",";
+                argumentList = argumentList.concat(categorizeArgument(obj)) +
+                ",";
             }
             writer.write(
                     "! " + object.getClass().getName() + ":" +
@@ -99,12 +92,12 @@ static class create {
             return ((User) obj).getUserID();
         return null;
     }
-    private static String catagoriseArgument(Object obj){
+    private static String categorizeArgument(Object obj){
         if (obj.getClass() == String.class)
             return obj.getClass().getName() +
                     ":" + obj;
         if (obj.getClass() == null)
-            return obj.getClass().getName() +
+            return null +
                     ":" + "null";
         if (findClassID(obj)!=null)
             return obj.getClass().getName() +
@@ -113,34 +106,13 @@ static class create {
                     ":" + obj;
 
     }
-    private static String catagoriseArgument(List<Object> obj) {
+    private static String categorizeArgument(List<Object> obj) {
         String argumentList = "[";
         for (Object element: obj) {
-            argumentList = argumentList.concat(catagoriseArgument(element)) + ",";
+            argumentList = argumentList.concat(categorizeArgument(element)) + ",";
         }
         argumentList = argumentList.concat("]");
         return argumentList;
-    }
-}
-
-public static class read{
-    public static void all() throws IOException{
-        Log.openReadLog();
-        String line;
-        int temp = reader.read();
-        char character = (char) temp;
-        while (temp != -1){
-            line = "";
-            while (character != '\n'){
-                line = line.concat(Character.toString(character));
-                temp = reader.read();
-                character = (char) temp;
-            }
-            Log.read.line(line);
-        }
-    }
-    public static void line(String line){
-
     }
 }
 }

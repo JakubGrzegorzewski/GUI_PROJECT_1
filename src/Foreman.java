@@ -59,7 +59,7 @@ public class Foreman extends User{
 
     @Override
     public String toString() {
-        return super.toString() + "["+ this.getForemanID() + "]" +
-                " list of orders:" + this.getOrderList().toString();
+        return super.toString() + "["+ this.getForemanID() + "]";
+//                " list of orders:" + this.getOrderList().toString();
     }
 }
